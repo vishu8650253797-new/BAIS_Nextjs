@@ -21,18 +21,18 @@ export function Hero() {
       <Container className="relative grid gap-12 py-20 sm:py-24 lg:grid-cols-2 lg:items-center lg:gap-10">
         <div>
           <h1 className="text-4xl font-bold leading-[1.12] sm:text-5xl">
-            <span className="block text-ink">Navigate your immigration case.</span>
-            <span className="block text-maroon">We&apos;ll handle the paperwork.</span>
+            <span className="block text-ink">Global mobility advisory for U.S. relocation.</span>
+            <span className="block text-maroon">Services in California.</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-body">
-            Bay Area Immigration Services is an immigration consultancy for
-            individuals, families, and employers. Our team leads every case,
-            and you have complete visibility from consultation to filing.
+            Our immigration consultants in California offer personalized
+            guidance for all U.S. visa types, including work, family, and
+            business visas. Let us help you navigate the process with ease.
           </p>
 
           <div className="mt-9">
             <Button href="/contact" size="lg">
-              Get Started
+              Contact Us
               <ArrowUpRight className="size-4" aria-hidden="true" />
             </Button>
           </div>

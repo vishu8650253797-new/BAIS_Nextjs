@@ -12,14 +12,14 @@ export function TwoPathSection({ withIntro = true }: { withIntro?: boolean }) {
           <div className="max-w-2xl">
             <p className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-accent">
               <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
-              Built for Individuals &amp; Employers
+              Visa Categories
             </p>
             <h2 className="text-3xl font-bold sm:text-4xl">
-              The right path for your situation
+              Personalized guidance for all U.S. visa types
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-body">
-              Whether you&apos;re sponsoring talent or applying for your own
-              visa, we handle every step of your case.
+              From getting started on work in the U.S. to settling down
+              permanently, our consultants guide you through every category.
             </p>
           </div>
         )}
@@ -30,28 +30,28 @@ export function TwoPathSection({ withIntro = true }: { withIntro?: boolean }) {
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
                   src="/images/why-bais.jpg"
-                  alt="Business handshake over a desk, representing employer sponsorship"
+                  alt="Business handshake over a desk, representing starting work in the U.S."
                   fill
                   sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <span className="absolute left-4 top-4 inline-flex rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-wide text-maroon">
-                  For Employers
+                  Nonimmigrant Visa
                 </span>
               </div>
               <div className="flex flex-1 flex-col justify-between p-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-ink">Hiring immigrant talent?</h3>
+                  <h3 className="text-2xl font-bold text-ink">Work Visa</h3>
                   <p className="mt-3 text-base leading-relaxed text-body">
-                    We handle documentation end-to-end, from H-1B and L-1
-                    sponsorship to I-9 and E-Verify compliance.
+                    For people who want to get started on working in the
+                    U.S. in a variety of available fields &amp; professions.
                   </p>
                 </div>
                 <Link
                   href="/services#employment-immigration"
                   className="mt-8 inline-flex w-fit items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-maroon hover:text-white"
                 >
-                  Learn more
+                  Explore services
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
               </div>
@@ -63,25 +63,25 @@ export function TwoPathSection({ withIntro = true }: { withIntro?: boolean }) {
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
                   src="/images/about-story.jpg"
-                  alt="Airplane wing above the clouds, representing an individual's immigration journey"
+                  alt="Airplane wing above the clouds, representing settling permanently in the U.S."
                   fill
                   sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <span className="absolute left-4 top-4 inline-flex rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-wide text-maroon">
-                  For Individuals &amp; Families
+                  Immigrant Visa
                 </span>
               </div>
               <div className="flex flex-1 flex-col justify-between p-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-ink">Applying for a visa?</h3>
+                  <h3 className="text-2xl font-bold text-ink">Permanent Visa</h3>
                   <p className="mt-3 text-base leading-relaxed text-body">
-                    From work visas to green cards and family petitions, we
-                    guide you to the strongest path forward.
+                    For people to settle down in the United States by
+                    obtaining a legal permanent residency status.
                   </p>
                 </div>
                 <Link
-                  href="/services"
+                  href="/services#permanent-immigration"
                   className="mt-8 inline-flex w-fit items-center gap-1.5 rounded-full bg-cream px-5 py-2.5 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-maroon hover:text-white"
                 >
                   Explore services

@@ -8,13 +8,13 @@ import { DashboardCard } from "@/components/home/mockups/DashboardCard";
 const blocks = [
   {
     number: "01",
-    eyebrow: "Assessment",
-    title: "Smarter strategy, the right path from day one",
+    eyebrow: "Consultation",
+    title: "A detailed consultation, applied to your case",
     description:
-      "We start with a detailed consultation to understand your situation, then map out the categories most likely to succeed.",
+      "We offer a detailed consultation for $100, including an assessment of your situation and an overview of your case — applied toward your service if you choose to proceed with us.",
     points: [
       "A $100 consultation, applied toward your service",
-      "Guidance informed by current USCIS and DOL requirements",
+      "Our main source of knowledge is USCIS and the Department of Labor",
       "A clear recommendation before any paperwork begins",
     ],
     mockup: <PathwayCard />,
@@ -23,13 +23,13 @@ const blocks = [
   {
     number: "02",
     eyebrow: "Documentation",
-    title: "Cases that keep moving",
+    title: "Careful preparation of every document",
     description:
-      "Our team prepares and organizes every document your case needs, so nothing stalls waiting on paperwork.",
+      "Our business specializes in the preparation of the paperwork and documents needed to obtain visas. Once carefully prepared and edited, we submit the documentation packet to USCIS.",
     points: [
       "A dedicated team preparing and reviewing your documentation",
       "Careful editing before anything is submitted to USCIS",
-      "Timely, affordable service from consultation to filing",
+      "Timely and affordable service, from consultation to filing",
     ],
     mockup: <TimelineCard />,
     reverse: true,
@@ -37,9 +37,9 @@ const blocks = [
   {
     number: "03",
     eyebrow: "Ongoing Support",
-    title: "Confidence at every step",
+    title: "Track your case from your own account",
     description:
-      "Every client gets their own account to track case progress and alerts, with our team available for questions along the way.",
+      "Each and every client has their own account from where they can track case progress and case alerts from time to time.",
     points: [
       "Track your case progress from your own account",
       "Case alerts as your filing moves forward",
@@ -60,12 +60,12 @@ export function ProcessBlocks() {
             Why Bay Area Immigration Services
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            A better way to run your immigration case
+            Quality documentation, timely and affordable service
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-body">
-            Since 2001, we&apos;ve combined experienced case guidance with a
-            process that keeps every filing moving and keeps you informed at
-            every step.
+            Our expert team of reliable immigration consultants and document
+            specialists is dedicated to getting you fast, effective, and
+            affordable service.
           </p>
         </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { MarqueeStrip } from "@/components/home/MarqueeStrip";
 import { TwoPathSection } from "@/components/home/TwoPathSection";
+import { VisaMarquee } from "@/components/home/VisaMarquee";
 import { ProcessBlocks } from "@/components/home/ProcessBlocks";
 import { CoverageSection } from "@/components/home/CoverageSection";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -28,7 +29,7 @@ export default function HomePage() {
       <TrustStats />
       <BlogPreview />
       <FAQSection />
-      <TwoPathSection withIntro={false} />
+      <VisaMarquee />
     </>
   );
 }

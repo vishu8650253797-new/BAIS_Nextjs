@@ -13,7 +13,11 @@ export function BlogPreview() {
     <section className="py-24">
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHeading eyebrow="Resources" title="From the BAIS Blog" />
+          <SectionHeading
+            eyebrow="News Brief"
+            title="What is Happening?"
+            description="Stay informed with our news briefs, where we share the latest updates and important developments."
+          />
           <Button href="/blog" variant="secondary">
             View All Resources
           </Button>

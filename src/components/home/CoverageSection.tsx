@@ -65,7 +65,7 @@ export function CoverageSection() {
             Not sure which visa is right? We&apos;ll guide you to the strongest option.
           </p>
           <Button href="/contact">
-            Get Started
+            Contact Us
             <ArrowRight className="size-4" aria-hidden="true" />
           </Button>
         </FadeIn>

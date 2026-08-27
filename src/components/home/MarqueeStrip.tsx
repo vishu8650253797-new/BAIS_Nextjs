@@ -10,7 +10,7 @@ export function MarqueeStrip() {
   return (
     <section className="border-y border-border bg-white py-8">
       <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-body/60">
-        Serving Clients Across the Bay Area and Beyond
+        Popular Cities in the Bay Area
       </p>
 
       <div className="group relative mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">

@@ -29,7 +29,9 @@ export function TrustStats() {
             <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
             By the Numbers
           </p>
-          <h2 className="text-3xl font-bold sm:text-4xl">Experience you can count on</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Experienced Immigration Consultants for Your Needs
+          </h2>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">

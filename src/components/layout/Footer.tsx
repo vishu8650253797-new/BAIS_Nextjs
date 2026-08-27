@@ -5,6 +5,7 @@ import { serviceCategories } from "@/data/services";
 import { site } from "@/data/site";
 import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/shared/SocialIcons";
 import { Logo } from "@/components/layout/Logo";
+import { FooterWordmark } from "@/components/layout/FooterWordmark";
 
 const linkColumns = [
   {
@@ -121,6 +122,10 @@ export function Footer() {
             </div>
           ))}
         </div>
+      </Container>
+
+      <Container className="pb-10">
+        <FooterWordmark />
       </Container>
 
       <div className="border-t border-white/10">

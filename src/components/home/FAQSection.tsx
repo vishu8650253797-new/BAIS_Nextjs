@@ -8,8 +8,8 @@ export function FAQSection() {
     <section id="faq" className="scroll-mt-24 bg-cream py-24">
       <Container className="max-w-3xl">
         <SectionHeading
-          eyebrow="Frequently Asked Questions"
-          title="Common Questions About Working With Us"
+          eyebrow="Questions &amp; Answers"
+          title="Frequently Asked Questions"
           align="center"
           className="mx-auto"
         />

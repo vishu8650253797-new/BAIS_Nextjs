@@ -22,7 +22,8 @@ export function Testimonials() {
       <Container>
         <SectionHeading
           eyebrow="Client Experiences"
-          title="A trusted partner in your case"
+          title="What Our Clients Say"
+          description="We value our clients' feedback. Read testimonials from our valued customers to see how our services have helped them succeed. Your satisfaction is our priority."
           align="center"
           className="mx-auto"
         />

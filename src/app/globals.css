@@ -29,6 +29,7 @@
   --animate-fade-up: fade-up 0.6s ease-out forwards;
   --animate-fade-in: fade-in 0.6s ease-out forwards;
   --animate-marquee: marquee 32s linear infinite;
+  --animate-marquee-slow: marquee 46s linear infinite;
 
   @keyframes fade-up {
     from {
