@@ -10,16 +10,18 @@ import { mainNav } from "@/data/navigation";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { MegaMenuPanel } from "@/components/layout/MegaMenuPanel";
+import { BlogMegaMenuPanel } from "@/components/layout/BlogMegaMenuPanel";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { Logo } from "@/components/layout/Logo";
 
 type Rect = { left: number; width: number };
+type MegaMenuKey = "services" | "blog";
 
 export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<MegaMenuKey | null>(null);
   const [hoverRect, setHoverRect] = useState<Rect | null>(null);
   const navRef = useRef<HTMLDivElement | null>(null);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -39,7 +41,7 @@ export function Header() {
   }, [mobileOpen]);
 
   useEffect(() => {
-    setServicesOpen(false);
+    setOpenMenu(null);
   }, [pathname]);
 
   function updateRectFromTarget(target: HTMLElement) {
@@ -49,14 +51,14 @@ export function Header() {
     setHoverRect({ left: itemRect.left - containerRect.left, width: itemRect.width });
   }
 
-  function openServices(target: HTMLElement) {
+  function openMegaMenu(key: MegaMenuKey, target: HTMLElement) {
     if (closeTimeout.current) clearTimeout(closeTimeout.current);
     updateRectFromTarget(target);
-    setServicesOpen(true);
+    setOpenMenu(key);
   }
 
-  function scheduleCloseServices() {
-    closeTimeout.current = setTimeout(() => setServicesOpen(false), 150);
+  function scheduleClose() {
+    closeTimeout.current = setTimeout(() => setOpenMenu(null), 150);
   }
 
   return (
@@ -68,7 +70,7 @@ export function Header() {
         )}
         onMouseLeave={() => {
           setHoverRect(null);
-          scheduleCloseServices();
+          scheduleClose();
         }}
       >
         <Container className="flex h-20 items-center justify-between">
@@ -93,10 +95,10 @@ export function Header() {
                   key={item.label}
                   type="button"
                   aria-haspopup="true"
-                  aria-expanded={servicesOpen}
-                  onMouseEnter={(e) => openServices(e.currentTarget)}
-                  onFocus={(e) => openServices(e.currentTarget)}
-                  onClick={(e) => openServices(e.currentTarget)}
+                  aria-expanded={openMenu === item.hasMegaMenu}
+                  onMouseEnter={(e) => openMegaMenu(item.hasMegaMenu!, e.currentTarget)}
+                  onFocus={(e) => openMegaMenu(item.hasMegaMenu!, e.currentTarget)}
+                  onClick={(e) => openMegaMenu(item.hasMegaMenu!, e.currentTarget)}
                   className="relative z-10 flex items-center gap-1 px-4 py-2.5 text-sm font-semibold text-ink"
                 >
                   {item.label}
@@ -104,7 +106,7 @@ export function Header() {
                     aria-hidden="true"
                     className={cn(
                       "size-4 transition-transform duration-200",
-                      servicesOpen && "rotate-180",
+                      openMenu === item.hasMegaMenu && "rotate-180",
                     )}
                   />
                 </button>
@@ -114,11 +116,11 @@ export function Header() {
                   href={item.href}
                   onMouseEnter={(e) => {
                     if (closeTimeout.current) clearTimeout(closeTimeout.current);
-                    setServicesOpen(false);
+                    setOpenMenu(null);
                     updateRectFromTarget(e.currentTarget);
                   }}
                   onFocus={(e) => {
-                    setServicesOpen(false);
+                    setOpenMenu(null);
                     updateRectFromTarget(e.currentTarget);
                   }}
                   className="relative z-10 px-4 py-2.5 text-sm font-semibold text-ink"
@@ -145,7 +147,8 @@ export function Header() {
         </Container>
 
         <div onMouseEnter={() => closeTimeout.current && clearTimeout(closeTimeout.current)}>
-          <MegaMenuPanel open={servicesOpen} onClose={() => setServicesOpen(false)} />
+          <MegaMenuPanel open={openMenu === "services"} onClose={() => setOpenMenu(null)} />
+          <BlogMegaMenuPanel open={openMenu === "blog"} onClose={() => setOpenMenu(null)} />
         </div>
       </header>
 

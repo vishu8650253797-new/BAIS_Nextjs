@@ -3,6 +3,8 @@ export type BlogPost = {
   title: string;
   category: string;
   excerpt: string;
+  image: string;
+  imageAlt: string;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -12,6 +14,8 @@ export const blogPosts: BlogPost[] = [
     category: "Green Card",
     excerpt:
       "A look at how National Interest Waiver petitions are being adjudicated this year, and what a well-documented case needs to hold up under scrutiny.",
+    image: "/images/services-hero.jpg",
+    imageAlt: "Organized planning notebook and documents on a desk",
   },
   {
     slug: "stem-opt-ending-2027-ds-rule",
@@ -19,6 +23,8 @@ export const blogPosts: BlogPost[] = [
     category: "Blog",
     excerpt:
       "What the proposed changes to duration-of-status rules could mean for STEM OPT participants planning their next work-authorization step.",
+    image: "/images/blog-workspace.jpg",
+    imageAlt: "Laptop and desktop computer on a clean modern desk",
   },
   {
     slug: "oci-document-checklist-2026",
@@ -26,6 +32,8 @@ export const blogPosts: BlogPost[] = [
     category: "Blog",
     excerpt:
       "A practical, up-to-date checklist for preparing an Overseas Citizen of India application without avoidable delays.",
+    image: "/images/contact-office.jpg",
+    imageAlt: "Modern office building exterior",
   },
   {
     slug: "h1b-l1-extension-fees-2026",
@@ -33,6 +41,8 @@ export const blogPosts: BlogPost[] = [
     category: "Blog",
     excerpt:
       "Fee changes affecting employer-sponsored extensions this year, and how to plan filings around the new deadlines.",
+    image: "/images/blog-meeting-room.jpg",
+    imageAlt: "Minimalist meeting room with a long table",
   },
   {
     slug: "uscis-new-evidence-policy-2026",
@@ -40,6 +50,8 @@ export const blogPosts: BlogPost[] = [
     category: "Blog",
     excerpt:
       "Understanding the updated evidence standards and why a thoroughly documented initial filing matters more than ever.",
+    image: "/images/blog-consultation-room.jpg",
+    imageAlt: "Bright consultation room with chairs around a table",
   },
   {
     slug: "eb1a-approval-rate-2026",
@@ -47,6 +59,8 @@ export const blogPosts: BlogPost[] = [
     category: "Green Card",
     excerpt:
       "Current approval trends for the Extraordinary Ability category, and where petitions most often run into evidentiary trouble.",
+    image: "/images/hero-bayarea.jpg",
+    imageAlt: "San Francisco Bay Area skyline and Golden Gate Bridge",
   },
   {
     slug: "stem-opt-extension-2026-dhs-rule",
@@ -54,6 +68,8 @@ export const blogPosts: BlogPost[] = [
     category: "Blog",
     excerpt:
       "A walkthrough of the STEM OPT extension process under the latest DHS guidance, including I-539 filing considerations.",
+    image: "/images/why-bais.jpg",
+    imageAlt: "Business handshake over a desk",
   },
   {
     slug: "eb1a-extraordinary-ability-profile-strength",
@@ -61,6 +77,8 @@ export const blogPosts: BlogPost[] = [
     category: "Green Card",
     excerpt:
       "A realistic self-assessment framework for evaluating whether your achievements meet the EB-1A evidentiary criteria.",
+    image: "/images/about-story.jpg",
+    imageAlt: "Airplane wing above the clouds",
   },
   {
     slug: "h1b-visa-2026-filing-tips",
@@ -68,6 +86,8 @@ export const blogPosts: BlogPost[] = [
     category: "Blog",
     excerpt:
       "This year's biggest H-1B filing challenges, and practical steps to strengthen your petition before submission.",
+    image: "/images/blog-workspace.jpg",
+    imageAlt: "Laptop and desktop computer on a clean modern desk",
   },
   {
     slug: "uscis-premium-processing-fee-increase-2026",
@@ -75,6 +95,8 @@ export const blogPosts: BlogPost[] = [
     category: "Blog",
     excerpt:
       "What the updated premium processing fees mean for petitioners weighing faster adjudication against added cost.",
+    image: "/images/blog-meeting-room.jpg",
+    imageAlt: "Minimalist meeting room with a long table",
   },
   {
     slug: "h1b-to-green-card-process",
@@ -82,5 +104,7 @@ export const blogPosts: BlogPost[] = [
     category: "Green Card",
     excerpt:
       "A step-by-step overview of the path from H-1B status to permanent residency, and where to start planning early.",
+    image: "/images/family-immigration.jpg",
+    imageAlt: "People walking together on the beach at sunset",
   },
 ];

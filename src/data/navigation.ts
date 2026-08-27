@@ -1,12 +1,12 @@
 import { serviceCategories } from "./services";
 
-type NavItem = { label: string; href: string; hasMegaMenu?: boolean };
+type NavItem = { label: string; href: string; hasMegaMenu?: "services" | "blog" };
 
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services", hasMegaMenu: true },
-  { label: "Blog", href: "/blog" },
+  { label: "Services", href: "/services", hasMegaMenu: "services" },
+  { label: "Blog", href: "/blog", hasMegaMenu: "blog" },
   { label: "Contact", href: "/contact" },
 ];
 
