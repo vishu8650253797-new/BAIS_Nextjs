@@ -2,14 +2,16 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDown, Phone, X } from "lucide-react";
+import { ChevronDown, Mail, MapPin, Phone, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { mainNav, servicesMegaMenu } from "@/data/navigation";
 import { site } from "@/data/site";
 import { blogPosts } from "@/data/blog";
+import { team } from "@/data/team";
 import { Button } from "@/components/ui/Button";
 
 const recentPosts = blogPosts.slice(0, 6);
+const founder = team[0];
 
 export function MobileMenu({
   open,
@@ -18,7 +20,7 @@ export function MobileMenu({
   open: boolean;
   onClose: () => void;
 }) {
-  const [openKey, setOpenKey] = useState<"services" | "blog" | null>(null);
+  const [openKey, setOpenKey] = useState<"about" | "services" | "blog" | "contact" | null>(null);
 
   return (
     <div
@@ -81,6 +83,29 @@ export function MobileMenu({
                   )}
                 >
                   <div className="min-h-0 space-y-4">
+                    {item.hasMegaMenu === "about" && (
+                      <ul className="space-y-2.5 pl-1">
+                        <li>
+                          <Link href="/about" onClick={onClose} className="text-sm text-body">
+                            Our Story
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/about" onClick={onClose} className="text-sm text-body">
+                            Our Mission
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/about" onClick={onClose} className="text-sm text-body">
+                            Our Team
+                          </Link>
+                        </li>
+                        <li className="pt-1 text-sm text-body">
+                          Founder: <span className="font-semibold text-ink">{founder.name}</span>
+                        </li>
+                      </ul>
+                    )}
+
                     {item.hasMegaMenu === "services" &&
                       servicesMegaMenu.map((category) => (
                         <div key={category.title}>
@@ -120,6 +145,46 @@ export function MobileMenu({
                             </Link>
                           </li>
                         ))}
+                      </ul>
+                    )}
+
+                    {item.hasMegaMenu === "contact" && (
+                      <ul className="space-y-3 pl-1">
+                        <li>
+                          <a
+                            href={site.phoneHref}
+                            onClick={onClose}
+                            className="flex items-center gap-2.5 text-sm text-body"
+                          >
+                            <Phone className="size-4 shrink-0 text-maroon" aria-hidden="true" />
+                            {site.phone}
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={site.emailHref}
+                            onClick={onClose}
+                            className="flex items-center gap-2.5 text-sm text-body"
+                          >
+                            <Mail className="size-4 shrink-0 text-maroon" aria-hidden="true" />
+                            {site.email}
+                          </a>
+                        </li>
+                        <li>
+                          <span className="flex items-start gap-2.5 text-sm text-body">
+                            <MapPin className="mt-0.5 size-4 shrink-0 text-maroon" aria-hidden="true" />
+                            {site.address.full}
+                          </span>
+                        </li>
+                        <li>
+                          <Link
+                            href="/contact"
+                            onClick={onClose}
+                            className="text-sm font-bold text-maroon"
+                          >
+                            Go to Contact page
+                          </Link>
+                        </li>
                       </ul>
                     )}
                   </div>

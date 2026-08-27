@@ -9,13 +9,15 @@ import { cn } from "@/lib/utils";
 import { mainNav } from "@/data/navigation";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { AboutMegaMenuPanel } from "@/components/layout/AboutMegaMenuPanel";
 import { MegaMenuPanel } from "@/components/layout/MegaMenuPanel";
 import { BlogMegaMenuPanel } from "@/components/layout/BlogMegaMenuPanel";
+import { ContactMegaMenuPanel } from "@/components/layout/ContactMegaMenuPanel";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { Logo } from "@/components/layout/Logo";
 
 type Rect = { left: number; width: number };
-type MegaMenuKey = "services" | "blog";
+type MegaMenuKey = "about" | "services" | "blog" | "contact";
 
 export function Header() {
   const pathname = usePathname();
@@ -147,8 +149,10 @@ export function Header() {
         </Container>
 
         <div onMouseEnter={() => closeTimeout.current && clearTimeout(closeTimeout.current)}>
+          <AboutMegaMenuPanel open={openMenu === "about"} onClose={() => setOpenMenu(null)} />
           <MegaMenuPanel open={openMenu === "services"} onClose={() => setOpenMenu(null)} />
           <BlogMegaMenuPanel open={openMenu === "blog"} onClose={() => setOpenMenu(null)} />
+          <ContactMegaMenuPanel open={openMenu === "contact"} onClose={() => setOpenMenu(null)} />
         </div>
       </header>
 
