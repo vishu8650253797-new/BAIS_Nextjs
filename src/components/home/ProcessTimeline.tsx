@@ -86,7 +86,7 @@ export function ProcessTimeline() {
               />
             ))}
 
-            <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-4 sm:gap-x-4">
+            <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-4 sm:gap-x-4 sm:gap-y-10">
               {steps.map((step, index) => (
                 <FadeIn key={step.title} delay={index * 80}>
                   <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
