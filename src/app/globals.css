@@ -25,6 +25,7 @@
   --color-border: var(--color-border);
 
   --font-sans: var(--font-mulish);
+  --font-serif: var(--font-playfair);
 
   --animate-fade-up: fade-up 0.6s ease-out forwards;
   --animate-fade-in: fade-in 0.6s ease-out forwards;

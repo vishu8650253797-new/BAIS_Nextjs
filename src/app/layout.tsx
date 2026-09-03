@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
+import { Mulish, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -7,6 +7,12 @@ import { site } from "@/data/site";
 
 const mulish = Mulish({
   variable: "--font-mulish",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
   display: "swap",
 });
@@ -34,7 +40,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${mulish.variable} h-full antialiased`}>
+    <html lang="en" className={`${mulish.variable} ${playfair.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
         <a
           href="#main-content"
