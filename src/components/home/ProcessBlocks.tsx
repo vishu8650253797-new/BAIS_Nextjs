@@ -2,8 +2,8 @@ import { Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { PathwayCard } from "@/components/home/mockups/PathwayCard";
+import { VisaPathCard } from "@/components/home/mockups/VisaPathCard";
 import { TimelineCard } from "@/components/home/mockups/TimelineCard";
-import { DashboardCard } from "@/components/home/mockups/DashboardCard";
 
 const blocks = [
   {
@@ -22,6 +22,20 @@ const blocks = [
   },
   {
     number: "02",
+    eyebrow: "Case Strategy",
+    title: "Choosing the right visa path for you",
+    description:
+      "We weigh your situation against every available category — work, business, investment, or family — so you move forward on the path best suited to your goals.",
+    points: [
+      "Options reviewed across work, business, investor & family categories",
+      "Guidance across H-1B, L-1A/L-1B, O-1, TN, E-3, EB-1, EB-2 NIW, EB-5 & more",
+      "A strategy tailored to your goals before any filing begins",
+    ],
+    mockup: <VisaPathCard />,
+    reverse: true,
+  },
+  {
+    number: "03",
     eyebrow: "Documentation",
     title: "Careful preparation of every document",
     description:
@@ -32,20 +46,6 @@ const blocks = [
       "Timely and affordable service, from consultation to filing",
     ],
     mockup: <TimelineCard />,
-    reverse: true,
-  },
-  {
-    number: "03",
-    eyebrow: "Ongoing Support",
-    title: "Track your case from your own account",
-    description:
-      "Each and every client has their own account from where they can track case progress and case alerts from time to time.",
-    points: [
-      "Track your case progress from your own account",
-      "Case alerts as your filing moves forward",
-      "Support if a Request for Evidence (RFE) arises",
-    ],
-    mockup: <DashboardCard />,
     reverse: false,
   },
 ];

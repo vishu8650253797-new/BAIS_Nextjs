@@ -1,3 +1,5 @@
+import { MapPin } from "lucide-react";
+
 const cities = [
   "San Francisco", "San Jose", "Oakland", "Fremont", "Palo Alto",
   "Berkeley", "Mountain View", "Sunnyvale", "Santa Clara", "Redwood City",
@@ -9,7 +11,8 @@ export function MarqueeStrip() {
 
   return (
     <section className="border-y border-border bg-white py-8">
-      <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-body/60">
+      <p className="flex items-center justify-center gap-2 text-center text-xs font-bold uppercase tracking-[0.14em] text-accent">
+        <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
         Popular Cities in the Bay Area
       </p>
 
@@ -18,10 +21,11 @@ export function MarqueeStrip() {
           {track.map((city, i) => (
             <span
               key={`${city}-${i}`}
-              className="flex items-center gap-10 text-lg font-semibold text-body/50"
+              className="flex shrink-0 items-center gap-2.5 text-lg font-semibold tracking-tight text-ink/70 transition-colors duration-200 hover:text-maroon"
             >
+              <MapPin className="size-4 text-maroon/50" aria-hidden="true" />
               {city}
-              <span className="text-border" aria-hidden="true">
+              <span className="text-accent/40" aria-hidden="true">
                 •
               </span>
             </span>

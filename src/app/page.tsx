@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { MarqueeStrip } from "@/components/home/MarqueeStrip";
-import { TwoPathSection } from "@/components/home/TwoPathSection";
+import { AboutSection } from "@/components/home/AboutSection";
 import { VisaMarquee } from "@/components/home/VisaMarquee";
-import { ProcessBlocks } from "@/components/home/ProcessBlocks";
-import { CoverageSection } from "@/components/home/CoverageSection";
-import { Testimonials } from "@/components/home/Testimonials";
-import { TrustStats } from "@/components/home/TrustStats";
-import { BlogPreview } from "@/components/home/BlogPreview";
+import { ProcessTimeline } from "@/components/home/ProcessTimeline";
+import { AttorneySpotlight } from "@/components/home/AttorneySpotlight";
+import { TeamSection } from "@/components/home/TeamSection";
+import { ReviewsMarquee } from "@/components/home/ReviewsMarquee";
 import { FAQSection } from "@/components/home/FAQSection";
 
 export const metadata: Metadata = {
@@ -22,14 +21,13 @@ export default function HomePage() {
     <>
       <Hero />
       <MarqueeStrip />
-      <TwoPathSection />
-      <ProcessBlocks />
-      <CoverageSection />
-      <Testimonials />
-      <TrustStats />
-      <BlogPreview />
-      <FAQSection />
+      <AboutSection />
       <VisaMarquee />
+      <ProcessTimeline />
+      <AttorneySpotlight />
+      <TeamSection />
+      <ReviewsMarquee />
+      <FAQSection />
     </>
   );
 }
