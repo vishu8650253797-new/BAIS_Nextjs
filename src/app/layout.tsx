@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mulish, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { site } from "@/data/site";
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
+        <TopBar />
         <Header />
         <main id="main-content" className="flex-1">
           {children}

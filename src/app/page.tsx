@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/Hero";
 import { MarqueeStrip } from "@/components/home/MarqueeStrip";
 import { AboutSection } from "@/components/home/AboutSection";
 import { VisaMarquee } from "@/components/home/VisaMarquee";
+import { CountriesMarquee } from "@/components/home/CountriesMarquee";
 import { ProcessTimeline } from "@/components/home/ProcessTimeline";
 import { AttorneySpotlight } from "@/components/home/AttorneySpotlight";
 import { TeamSection } from "@/components/home/TeamSection";
@@ -23,6 +24,7 @@ export default function HomePage() {
       <MarqueeStrip />
       <AboutSection />
       <VisaMarquee />
+      <CountriesMarquee />
       <ProcessTimeline />
       <AttorneySpotlight />
       <TeamSection />
