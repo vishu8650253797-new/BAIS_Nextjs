@@ -64,7 +64,7 @@ export function TeamSection() {
                 <span
                   key={member.name}
                   title={`${member.name} — ${member.title}`}
-                  className="flex size-11 items-center justify-center rounded-full border-2 border-cream bg-ink text-xs font-bold text-white"
+                  className="relative flex size-11 cursor-default items-center justify-center rounded-full border-2 border-cream bg-ink text-xs font-bold text-white transition-all duration-200 hover:z-10 hover:-translate-y-1 hover:scale-110 hover:bg-maroon hover:shadow-lg hover:shadow-maroon/30"
                 >
                   {initials(member.name)}
                 </span>

@@ -65,32 +65,15 @@ export function AboutSection() {
           </Link>
         </div>
 
-        <FadeIn className="relative">
-          <div className="relative aspect-[4/5] w-4/5 overflow-hidden rounded-2xl shadow-xl shadow-ink/10 sm:w-3/4">
+        <FadeIn>
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-xl shadow-ink/10">
             <Image
-              src="/images/hero-bayarea.jpg"
-              alt="Bay Area Immigration Services consultants meeting with a client"
+              src="/images/office-storefront.jpg"
+              alt="Bay Area Immigration Services storefront and office entrance"
               fill
-              sizes="(min-width: 1024px) 35vw, 60vw"
+              sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"
             />
-          </div>
-
-          <div className="absolute -bottom-8 -right-2 aspect-[4/3] w-1/2 overflow-hidden rounded-2xl border-4 border-cream shadow-xl shadow-ink/15 sm:-right-4">
-            <Image
-              src="/images/contact-office.jpg"
-              alt="Bay Area Immigration Services office"
-              fill
-              sizes="(min-width: 1024px) 20vw, 35vw"
-              className="object-cover"
-            />
-          </div>
-
-          <div className="absolute -left-4 top-6 rounded-xl bg-white px-5 py-4 shadow-lg shadow-ink/10 sm:top-10">
-            <p className="text-2xl font-bold text-maroon">{yearsInBusiness()}+</p>
-            <p className="text-xs font-semibold uppercase tracking-wide text-body/60">
-              Years Experience
-            </p>
           </div>
         </FadeIn>
       </Container>
