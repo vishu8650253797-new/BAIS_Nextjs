@@ -55,7 +55,17 @@ export function Footer() {
               Guidance for every step of your immigration journey.
             </h2>
 
-            <div className="mt-8 space-y-3">
+            <p className="mt-4 text-sm text-white/70">{site.legalName}</p>
+
+            <div className="mt-4 space-y-3">
+              <p className="flex items-start gap-2 text-sm text-white/70">
+                <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                <span>
+                  {site.address.line1}
+                  <br />
+                  {site.address.city}, {site.address.state} {site.address.zip}
+                </span>
+              </p>
               <a
                 href={site.phoneHref}
                 className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
@@ -70,10 +80,6 @@ export function Footer() {
                 <Mail className="size-4 shrink-0" aria-hidden="true" />
                 {site.email}
               </a>
-              <p className="flex items-start gap-2 text-sm text-white/70">
-                <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-                {site.address.full}
-              </p>
             </div>
 
             <div className="mt-8 flex gap-3">
@@ -104,6 +110,16 @@ export function Footer() {
               >
                 <LinkedInIcon className="size-4" />
               </a>
+            </div>
+
+            <div className="mt-8 space-y-1 text-sm text-white/70">
+              <p>
+                <span className="font-bold text-white">Hours:</span> {site.hours.weekdays}
+              </p>
+              <p>{site.hours.weekend}</p>
+              <p>
+                <span className="font-bold text-white">Languages:</span> {site.languages}
+              </p>
             </div>
           </div>
 
@@ -140,7 +156,10 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <Container className="py-6">
+        <Container className="space-y-4 py-6">
+          <p className="text-xs leading-relaxed text-white/40">
+            {site.successRateDisclaimer}
+          </p>
           <p className="text-xs leading-relaxed text-white/40">{site.disclaimer}</p>
         </Container>
       </div>

@@ -6,8 +6,8 @@ import { FadeIn } from "@/components/shared/FadeIn";
 import { team } from "@/data/team";
 
 const highlights = [
-  { icon: Users, text: "Consultants, document specialists & an advisory board" },
-  { icon: Globe2, text: "U.S. and India chapters working in step on every case" },
+  { icon: Users, text: "Immigration consultants, document specialists and case coordinators" },
+  { icon: Globe2, text: "U.S. and India teams working together on every case" },
 ];
 
 function initials(name: string) {
@@ -31,19 +31,19 @@ export function TeamSection() {
             Our Team
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            A team built across two continents
+            A Team Built Across Two Continents
           </h2>
           <div className="mt-6 space-y-5 text-base leading-relaxed text-body">
             <p>
-              Our expert team of reliable immigration consultants and legal
-              document assistants spans a U.S. chapter and an India chapter,
-              working together to get you fast, effective, and affordable
-              service.
+              Our immigration consultants and document specialists work
+              across our U.S. office in Fremont and our India chapter. That
+              lets us move your case forward quickly and affordably, with
+              support in English and Hindi.
             </p>
             <p>
-              From leadership and HR to community outreach and case
-              coordination, every member plays a part in moving your case
-              forward.
+              From leadership and case coordination to documentation and
+              client support, every team member plays a part in moving your
+              case forward.
             </p>
           </div>
 

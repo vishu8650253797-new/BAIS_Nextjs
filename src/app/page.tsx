@@ -5,10 +5,11 @@ import { AboutSection } from "@/components/home/AboutSection";
 import { VisaMarquee } from "@/components/home/VisaMarquee";
 import { CountriesMarquee } from "@/components/home/CountriesMarquee";
 import { ProcessTimeline } from "@/components/home/ProcessTimeline";
-import { AttorneySpotlight } from "@/components/home/AttorneySpotlight";
+import { WhyBais } from "@/components/home/WhyBais";
 import { TeamSection } from "@/components/home/TeamSection";
 import { ReviewsMarquee } from "@/components/home/ReviewsMarquee";
 import { FAQSection } from "@/components/home/FAQSection";
+import { FinalCta } from "@/components/home/FinalCta";
 
 export const metadata: Metadata = {
   title: "Immigration Consultants in California",
@@ -26,10 +27,11 @@ export default function HomePage() {
       <VisaMarquee />
       <CountriesMarquee />
       <ProcessTimeline />
-      <AttorneySpotlight />
+      <WhyBais />
       <TeamSection />
       <ReviewsMarquee />
       <FAQSection />
+      <FinalCta />
     </>
   );
 }

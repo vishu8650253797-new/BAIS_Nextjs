@@ -3,8 +3,8 @@ import {
   Clock,
   FileCheck,
   Globe2,
-  Headset,
   Lock,
+  Phone,
   ShieldCheck,
   Sparkles,
   Target,
@@ -18,41 +18,41 @@ import { FOUNDED_YEAR, site, yearsInBusiness } from "@/data/site";
 const trustBullets = [
   {
     icon: ShieldCheck,
-    title: "Trusted Guidance",
-    description: "Experienced immigration consultants",
+    title: "Registered & Bonded",
+    description: "California Bond No. 5317191",
   },
   {
     icon: Target,
-    title: "Personalized Strategy",
-    description: "Tailored to your specific goals",
+    title: "99% Success Rate*",
+    description: "On petitions prepared by BAIS",
   },
   {
     icon: FileCheck,
     title: "End-to-End Support",
-    description: "From consultation to filing",
+    description: "From free consultation to filing",
   },
 ];
 
 const bottomStats = [
   {
     icon: Globe2,
-    title: "International Reach",
-    description: "Serving clients across multiple countries",
+    title: "Free Consultation",
+    description: "An honest case review at no charge",
   },
   {
     icon: Sparkles,
-    title: "Detailed Case Review",
-    description: "A $100 consultation for every case",
+    title: "350+ Expert Network",
+    description: "Professors for expert opinion letters",
   },
   {
     icon: Clock,
-    title: "Timely & Affordable",
-    description: "Efficient service from consultation to filing",
+    title: "English & Hindi",
+    description: "Speak with us in your language",
   },
   {
     icon: Lock,
     title: "Secure & Confidential",
-    description: "Your privacy and information are protected",
+    description: "Your documents and data are protected",
   },
 ];
 
@@ -66,35 +66,36 @@ export function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-maroon backdrop-blur-sm">
             <ShieldCheck className="size-3.5" aria-hidden="true" />
-            USA Visa Consultants
+            Registered &amp; Bonded Immigration Consultant
           </span>
 
           <h1 className="mt-5 text-4xl font-bold leading-[1.12] sm:text-5xl">
-            <span className="block text-ink">Global mobility advisory for U.S. relocation.</span>
-            <span className="block text-maroon">Services in California.</span>
+            <span className="block text-ink">Immigration Document Preparation</span>
+            <span className="block text-maroon">in Fremont &amp; the Bay Area.</span>
           </h1>
           <span className="mt-4 block h-1 w-14 rounded-full bg-maroon" aria-hidden="true" />
 
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-body">
-            Our immigration consultants in California offer personalized
-            guidance for all U.S. visa types, including work, family, and
-            business visas. Let us help you navigate the process with ease.
+            Since {FOUNDED_YEAR}, Bay Area Immigration Services has helped
+            professionals, employers and families across the Bay Area prepare
+            strong, well-organized H-1B, O-1, L-1A, PERM, EB-1A and EB-2 NIW
+            petitions. Visit our Fremont office or work with us remotely, in
+            English or Hindi.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
-            <Button href="/contact" size="lg">
-              Contact Us
-              <ArrowUpRight className="size-4" aria-hidden="true" />
-            </Button>
             <Button
               href={site.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              variant="inverse"
               size="lg"
             >
-              Book a Consultation
-              <Headset className="size-4" aria-hidden="true" />
+              Book a Free Consultation
+              <ArrowUpRight className="size-4" aria-hidden="true" />
+            </Button>
+            <Button href={site.phoneHref} variant="inverse" size="lg">
+              Call {site.phone}
+              <Phone className="size-4" aria-hidden="true" />
             </Button>
           </div>
 

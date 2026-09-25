@@ -75,9 +75,8 @@ export function FAQSection() {
             Frequently Asked <span className="text-maroon">Questions</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-body">
-            Find answers to common questions about our Bay Area Immigration
-            Services, including document preparation, visa applications,
-            green card processing, and more.
+            Answers to common questions about working with Bay Area
+            Immigration Services in Fremont.
           </p>
         </div>
 

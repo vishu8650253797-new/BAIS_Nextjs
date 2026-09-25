@@ -1,78 +1,171 @@
-import { Star } from "lucide-react";
+import { BadgeCheck, ChevronRight, Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { testimonials } from "@/data/testimonials";
+import { site } from "@/data/site";
 
-const avatarSeeds = [12, 47, 5, 65, 33, 8];
+const googleReviewUrl = `https://www.google.com/search?q=${encodeURIComponent(
+  `${site.name} ${site.address.city} ${site.address.state} reviews`,
+)}`;
 
-function ReviewCard({
-  quote,
-  attribution,
-  avatarSeed,
-}: {
-  quote: string;
-  attribution: string;
-  avatarSeed: number;
-}) {
-  const [name, sourceRaw] = attribution.split("·").map((part) => part.trim());
-  const source = sourceRaw?.replace("via ", "");
+const avatarColors = [
+  "bg-emerald-600",
+  "bg-orange-500",
+  "bg-blue-600",
+  "bg-purple-600",
+];
 
+const reviews = [
+  {
+    name: "Rahul Patil",
+    daysAgo: "3 days ago",
+    quote:
+      "Akash and the team were extremely helpful with my H1B situation. They listened closely...",
+  },
+  {
+    name: "Lukasz Kruk",
+    daysAgo: "7 days ago",
+    quote:
+      "Kritagya was an informative with all the law guidance in order for for me to get the...",
+  },
+  {
+    name: "Parag Kulkarni",
+    daysAgo: "7 days ago",
+    quote:
+      "Bay Area Immigration Services Inc. are truely the best consultants that one can com...",
+  },
+  {
+    name: "Abrar Ali Anika",
+    daysAgo: "17 days ago",
+    quote:
+      "I'm very grateful to Bay Area Immigration Services for helping me throughout the...",
+  },
+];
+
+function GoogleLogo() {
   return (
-    <div className="flex h-full w-[320px] shrink-0 flex-col rounded-2xl border border-border bg-white p-7 shadow-sm shadow-ink/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10 sm:w-[360px]">
-      <div className="flex items-center gap-3">
-        <img
-          src={`https://i.pravatar.cc/96?img=${avatarSeed}`}
-          alt={`${name} portrait`}
-          className="size-12 shrink-0 rounded-full border-2 border-cream object-cover"
-        />
-        <div>
-          <p className="text-sm font-bold text-ink">{name}</p>
-          {source && <p className="text-xs text-body/60">via {source}</p>}
-        </div>
-      </div>
+    <span className="text-2xl font-bold tracking-tight">
+      <span style={{ color: "#4285F4" }}>G</span>
+      <span style={{ color: "#EA4335" }}>o</span>
+      <span style={{ color: "#FBBC05" }}>o</span>
+      <span style={{ color: "#4285F4" }}>g</span>
+      <span style={{ color: "#34A853" }}>l</span>
+      <span style={{ color: "#EA4335" }}>e</span>
+    </span>
+  );
+}
 
-      <div className="mt-4 flex gap-0.5 text-accent">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Star key={i} className="size-3.5 fill-current" aria-hidden="true" />
-        ))}
-      </div>
-
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-body">
-        &ldquo;{quote}&rdquo;
-      </p>
+function StarRating({ value }: { value: number }) {
+  return (
+    <div className="flex items-center gap-0.5">
+      {Array.from({ length: 5 }).map((_, i) => {
+        const fill = Math.max(0, Math.min(1, value - i));
+        return (
+          <span key={i} className="relative inline-flex size-4">
+            <Star className="absolute inset-0 size-4 text-border" aria-hidden="true" />
+            <span
+              className="absolute inset-0 overflow-hidden"
+              style={{ width: `${fill * 100}%` }}
+            >
+              <Star className="size-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+            </span>
+          </span>
+        );
+      })}
     </div>
   );
 }
 
+function initials(name: string) {
+  return name.charAt(0).toUpperCase();
+}
+
 export function ReviewsMarquee() {
-  const reviews = testimonials.slice(0, 6);
-  const track = [...reviews, ...reviews];
-
   return (
-    <section className="bg-cream py-24">
-      <Container className="max-w-2xl text-center">
-        <p className="mb-4 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wide text-accent">
-          <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
-          Client Reviews
-        </p>
-        <h2 className="text-3xl font-bold sm:text-4xl">What Our Clients Say</h2>
-        <p className="mt-4 text-lg leading-relaxed text-body">
-          Real feedback from clients we&apos;ve helped with work visas, green
-          cards, and family-based immigration.
-        </p>
-      </Container>
-
-      <div className="group relative mt-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
-        <div className="flex w-max animate-marquee-slow gap-6 [animation-direction:reverse] group-hover:[animation-play-state:paused]">
-          {track.map((review, index) => (
-            <ReviewCard
-              key={`${review.attribution}-${index}`}
-              quote={review.quote}
-              attribution={review.attribution}
-              avatarSeed={avatarSeeds[index % avatarSeeds.length]}
-            />
-          ))}
+    <section id="reviews" className="scroll-mt-24 bg-white py-24">
+      <Container>
+        <div className="rounded-2xl bg-cream p-8">
+          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+            <div>
+              <div className="flex items-center gap-2">
+                <GoogleLogo />
+                <span className="text-2xl font-bold text-ink">Reviews</span>
+              </div>
+              <div className="mt-2 flex items-center gap-2">
+                <span className="text-2xl font-bold text-ink">4.4</span>
+                <StarRating value={4.4} />
+                <span className="text-sm text-body/60">(212)</span>
+              </div>
+            </div>
+            <a
+              href={googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center gap-1.5 rounded-full bg-maroon px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-maroon-dark"
+            >
+              Review us on Google
+            </a>
+          </div>
         </div>
-      </div>
+
+        <div className="relative mt-8">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {reviews.map((review, index) => (
+              <div
+                key={review.name}
+                className="rounded-2xl bg-cream p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/5"
+              >
+                <div className="flex items-center gap-3">
+                  <span
+                    className={`flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${avatarColors[index % avatarColors.length]}`}
+                  >
+                    {initials(review.name)}
+                  </span>
+                  <div>
+                    <span className="flex items-center gap-1 text-sm font-bold text-ink">
+                      {review.name}
+                      <BadgeCheck className="size-3.5 text-maroon" aria-hidden="true" />
+                    </span>
+                    <p className="text-xs text-body/50">{review.daysAgo}</p>
+                  </div>
+                </div>
+
+                <div className="mt-3">
+                  <StarRating value={5} />
+                </div>
+
+                <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-body">
+                  {review.quote}
+                </p>
+                <a
+                  href={googleReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm font-semibold text-maroon hover:text-maroon-dark"
+                >
+                  Read more
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <a
+            href={googleReviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="See more reviews on Google"
+            className="absolute -right-4 top-1/2 hidden size-10 -translate-y-1/2 items-center justify-center rounded-full bg-ink/80 text-white shadow-lg transition-colors duration-200 hover:bg-ink lg:flex"
+          >
+            <ChevronRight className="size-5" aria-hidden="true" />
+          </a>
+        </div>
+
+        <div className="mt-6 flex items-center justify-center gap-1.5" aria-hidden="true">
+          <span className="size-2 rounded-full bg-ink" />
+          <span className="size-1.5 rounded-full bg-border" />
+          <span className="size-1.5 rounded-full bg-border" />
+          <span className="size-1.5 rounded-full bg-border" />
+          <span className="size-1.5 rounded-full bg-border" />
+        </div>
+      </Container>
     </section>
   );
 }

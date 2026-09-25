@@ -19,30 +19,30 @@ const steps = [
   {
     number: "01",
     icon: Phone,
-    title: "Consultation",
+    title: "Free Consultation",
     description:
-      "Call us or request a consultation. We learn about your goals, your timeline, and what brought you to the U.S.",
+      "Tell us your goals by phone, video call or at our Fremont office.",
   },
   {
     number: "02",
     icon: ClipboardList,
-    title: "Case Assessment",
+    title: "Case Review",
     description:
-      "A detailed consultation reviews your situation against USCIS and Department of Labor guidance — applied toward your service if you move forward.",
+      "We assess your eligibility and identify the strongest visa or green card category.",
   },
   {
     number: "03",
     icon: FileEdit,
-    title: "Documentation & Filing",
+    title: "Document Preparation",
     description:
-      "We prepare, edit, and submit your full documentation packet, tailored to the visa category that fits your case.",
+      "We prepare your forms, organize your evidence and draft support letters.",
   },
   {
     number: "04",
     icon: Bell,
-    title: "Ongoing Case Tracking",
+    title: "Filing & Updates",
     description:
-      "Follow your case from your own account, with alerts as it moves forward and support if a Request for Evidence arises.",
+      "We assemble your filing-ready petition and keep you informed until a decision.",
   },
 ];
 

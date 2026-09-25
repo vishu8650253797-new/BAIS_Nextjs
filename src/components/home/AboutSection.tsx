@@ -6,10 +6,10 @@ import { FadeIn } from "@/components/shared/FadeIn";
 import { FOUNDED_YEAR, yearsInBusiness } from "@/data/site";
 
 const highlights = [
-  "Immigrant & nonimmigrant visa documentation",
-  "Work visas: H-1B, L-1A, L-1B, O-1, J-1, TN & E-3",
-  "Green cards & employment-based petitions",
-  "Family-based immigration & fiancé visas",
+  "H-1B, O-1, L-1A & TN work visa petitions",
+  "EB-1A, EB-2 NIW, PERM & I-140 green cards",
+  "H-2A & H-2B seasonal worker petitions",
+  "RFE responses, expert letters & OCI",
 ];
 
 export function AboutSection() {
@@ -22,25 +22,24 @@ export function AboutSection() {
             About Us
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            About Bay Area Immigration Services
+            A Fremont Immigration Consultant Trusted Since {FOUNDED_YEAR}
           </h2>
           <div className="mt-6 space-y-5 text-base leading-relaxed text-body">
             <p>
-              Founded in {FOUNDED_YEAR}, Bay Area Immigration Services has
-              been offering immigration assistance to individuals worldwide
-              for over {yearsInBusiness()} years. We started by helping
-              people immigrate to the U.S. and Canada, and gradually
-              expanded our scope to many other countries — including
-              Australia, New Zealand, Ireland, Singapore, France, and
-              Germany.
+              Bay Area Immigration Services (BAIS) has prepared immigration
+              petitions from our office on Paseo Padre Parkway in Fremont for
+              more than {yearsInBusiness()} years. We&apos;ve grown alongside
+              the Bay Area&apos;s technology, research and healthcare
+              workforce. We know the cases this community files most: H-1B
+              petitions for growing companies, O-1 and L-1A visas for
+              founders and leaders, PERM labor certifications, and
+              self-petitioned green cards such as EB-1A and EB-2 NIW.
             </p>
             <p>
-              Our expertise lies in immigrant and nonimmigrant visa
-              documentation. We&apos;ve earned particular depth in U.S. work
-              visas — H-1B, L-1A, L-1B, O-1, J-1, TN, and E-3 — primarily
-              for clients in the IT and healthcare fields. Beyond work
-              visas and green cards, we also file applications for
-              nonimmigrant categories such as E-1, E-2, B-1, B-2, and K-1.
+              Our focus is documentation, done thoroughly. We review your
+              eligibility, organize your evidence, prepare every form and
+              support letter, and assemble a complete, filing-ready petition.
+              We keep you updated at every step, in English or Hindi.
             </p>
           </div>
 
@@ -60,7 +59,7 @@ export function AboutSection() {
             href="/about"
             className="mt-10 inline-flex w-fit items-center gap-1.5 rounded-full bg-maroon px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-ink"
           >
-            More about our firm
+            More About Our Firm
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>

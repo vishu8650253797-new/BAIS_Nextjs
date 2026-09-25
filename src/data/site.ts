@@ -2,6 +2,7 @@ export const FOUNDED_YEAR = 2001;
 
 export const site = {
   name: "Bay Area Immigration Services",
+  legalName: "Bay Area Immigration Services, Inc.",
   shortName: "BAIS",
   tagline: "Immigration Consultants Serving the Bay Area Since 2001",
   description:
@@ -12,15 +13,22 @@ export const site = {
   email: "info@bayareaimmigrationservices.com",
   emailHref: "mailto:info@bayareaimmigrationservices.com",
   address: {
-    line1: "39159 Paseo Padre Pkwy, STE 115",
+    line1: "39159 Paseo Padre Pkwy, Suite 115",
     city: "Fremont",
     state: "CA",
     zip: "94538",
     country: "United States",
-    full: "39159 Paseo Padre Pkwy, STE 115, Fremont, CA 94538",
+    full: "39159 Paseo Padre Pkwy, Suite 115, Fremont, CA 94538",
   },
+  hours: {
+    weekdays: "Mon–Fri, 9:00 AM–6:00 PM",
+    weekend: "Sat–Sun, Closed",
+  },
+  languages: "English & Hindi",
   consultationFee:
     "We offer a detailed consultation for $100, which is applied toward your overall service cost if you choose to move forward with us.",
+  successRateDisclaimer:
+    "*Success rate based on petitions prepared by Bay Area Immigration Services. Past results do not guarantee future outcomes; every case is decided by USCIS on its own merits.",
   social: {
     facebook: "https://www.facebook.com/bayareaimmi/",
     twitter: "https://twitter.com/bayareaimmig",

@@ -5,63 +5,109 @@ import { Container } from "@/components/ui/Container";
 
 const cards = [
   {
-    badge: "Nonimmigrant Visa",
-    title: "Work Visa",
+    badge: "Work Visa",
+    title: "H-1B Visa",
     description:
-      "For people who want to get started on working in the U.S. in a variety of available fields & professions.",
-    image: "/images/why-bais.jpg",
-    alt: "Business handshake over a desk, representing starting work in the U.S.",
+      "Cap petitions, transfers, extensions and amendments for Bay Area employers and professionals.",
+    image: "/images/hero-bayarea.jpg",
+    alt: "San Francisco Bay Area skyline, representing H-1B employers across the region.",
     href: "/services#employment-immigration",
   },
   {
-    badge: "Immigrant Visa",
-    title: "Permanent Visa",
+    badge: "Work Visa",
+    title: "O-1 Visa",
     description:
-      "For people to settle down in the United States by obtaining a legal permanent residency status.",
-    image: "/images/about-story.jpg",
-    alt: "Airplane wing above the clouds, representing settling permanently in the U.S.",
-    href: "/services#permanent-immigration",
-  },
-  {
-    badge: "Nonimmigrant Visa",
-    title: "Business Visa",
-    description:
-      "For people who want to visit the U.S. for a short duration for business related reasons like conferences.",
-    image: "/images/contact-office.jpg",
-    alt: "Modern office building exterior, representing business visits to the U.S.",
-    href: "/services#business-investor",
-  },
-  {
-    badge: "Family Immigration",
-    title: "Family Immigration",
-    description:
-      "Guidance for bringing family members to the United States and keeping households together.",
-    image: "/images/family-immigration.jpg",
-    alt: "Family walking together on the beach at sunset, representing family reunification.",
-    href: "/services#family-immigration",
-  },
-  {
-    badge: "U.S. Citizenship",
-    title: "U.S. Citizenship",
-    description: "Naturalization (Form N-400) preparation support.",
-    image: "/images/services-hero.jpg",
-    alt: "Organized planning notebook and documents on a desk, representing citizenship paperwork.",
-    href: "/services#permanent-immigration",
-  },
-  {
-    badge: "Other Services",
-    title: "Other Services",
-    description:
-      "I-9 Verification, E-Verify, RFE assistance, and Global Mobility support for individuals and employers.",
+      "Extraordinary ability petitions for researchers, founders, engineers and artists.",
     image: "/images/hero-bayarea.jpg",
-    alt: "San Francisco Bay Area skyline, representing employer compliance services across the region.",
+    alt: "San Francisco Bay Area skyline, representing O-1 extraordinary ability petitions.",
+    href: "/services#employment-immigration",
+  },
+  {
+    badge: "Work Visa",
+    title: "L-1A Visa",
+    description:
+      "Intracompany transfers for managers and executives expanding to the U.S.",
+    image: "/images/hero-bayarea.jpg",
+    alt: "San Francisco Bay Area skyline, representing L-1A intracompany transfers.",
+    href: "/services#employment-immigration",
+  },
+  {
+    badge: "Green Card",
+    title: "PERM & I-140",
+    description:
+      "Labor certification and immigrant petitions for employer-sponsored green cards.",
+    image: "/images/about-story.jpg",
+    alt: "Airplane wing above the clouds, representing PERM and I-140 green card petitions.",
+    href: "/services#permanent-immigration",
+  },
+  {
+    badge: "Green Card",
+    title: "EB-1A Green Card",
+    description:
+      "Self-petition green cards built on your achievements. No employer needed.",
+    image: "/images/about-story.jpg",
+    alt: "Airplane wing above the clouds, representing EB-1A self-petition green cards.",
+    href: "/services#permanent-immigration",
+  },
+  {
+    badge: "Green Card",
+    title: "EB-2 NIW",
+    description:
+      "National Interest Waiver petitions for professionals whose work benefits the U.S.",
+    image: "/images/about-story.jpg",
+    alt: "Airplane wing above the clouds, representing EB-2 National Interest Waiver petitions.",
+    href: "/services#permanent-immigration",
+  },
+  {
+    badge: "Employer",
+    title: "H-2A Visa",
+    description:
+      "Seasonal agricultural worker petitions for U.S. farms and growers.",
+    image: "/images/family-immigration.jpg",
+    alt: "Sunset sky, representing H-2A seasonal agricultural worker petitions.",
+    href: "/services#employment-immigration",
+  },
+  {
+    badge: "Employer",
+    title: "H-2B Visa",
+    description:
+      "Temporary non-agricultural worker petitions for seasonal and peak-load needs.",
+    image: "/images/family-immigration.jpg",
+    alt: "Sunset sky, representing H-2B temporary non-agricultural worker petitions.",
+    href: "/services#employment-immigration",
+  },
+  {
+    badge: "Case Support",
+    title: "RFE Response",
+    description:
+      "Structured, evidence-backed responses to USCIS Requests for Evidence.",
+    image: "/images/blog-workspace.jpg",
+    alt: "Desk workspace, representing structured RFE response preparation.",
+    href: "/services#other-services",
+  },
+  {
+    badge: "Case Support",
+    title: "Expert Opinion Letters",
+    description:
+      "Letters from our network of 350+ professors for EB-1A, NIW and O-1 cases.",
+    image: "/images/blog-workspace.jpg",
+    alt: "Desk workspace, representing expert opinion letter preparation.",
+    href: "/services#other-services",
+  },
+  {
+    badge: "Services",
+    title: "OCI & Renunciation",
+    description:
+      "OCI cards and Indian passport renunciation for families across the Bay Area.",
+    image: "/images/hero-liberty.jpg",
+    alt: "Statue of Liberty, representing OCI and renunciation services.",
     href: "/services#other-services",
   },
 ];
 
 function VisaCard({ card }: { card: (typeof cards)[number] }) {
   return (
-    <div className="group flex h-full w-[340px] shrink-0 flex-col overflow-hidden rounded-2xl border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-maroon/20 hover:shadow-xl hover:shadow-ink/10 sm:w-[380px]">
+    <div className="group flex h-[420px] w-[340px] shrink-0 flex-col overflow-hidden rounded-2xl border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-maroon/20 hover:shadow-xl hover:shadow-ink/10 sm:h-[450px] sm:w-[380px]">
       <div className="relative aspect-[16/10] w-full overflow-hidden">
         <Image
           src={card.image}
@@ -76,8 +122,10 @@ function VisaCard({ card }: { card: (typeof cards)[number] }) {
       </div>
       <div className="flex flex-1 flex-col justify-between p-7">
         <div>
-          <h3 className="text-xl font-bold text-ink">{card.title}</h3>
-          <p className="mt-2.5 text-sm leading-relaxed text-body">{card.description}</p>
+          <h3 className="line-clamp-1 text-xl font-bold text-ink">{card.title}</h3>
+          <p className="mt-2.5 line-clamp-3 text-sm leading-relaxed text-body">
+            {card.description}
+          </p>
         </div>
         <Link
           href={card.href}

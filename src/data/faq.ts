@@ -5,28 +5,37 @@ export type FAQItem = {
 
 export const homeFAQs: FAQItem[] = [
   {
-    question: "What services does Bay Area Immigration Services offer?",
+    question: "Where is your office, and can I work with you remotely?",
     answer:
-      "We offer a wide range of immigration document-preparation and case-support services, including visa applications, green card processing, work permits, family-based immigration, and citizenship applications. Our experienced team is here to help you navigate the process.",
+      "Our office is at 39159 Paseo Padre Pkwy, Suite 115, Fremont, CA 94538, open Monday to Friday, 9 AM to 6 PM. Many clients across the Bay Area, the U.S. and India work with us entirely by phone, video call and email.",
   },
   {
-    question: "How do I get started with Bay Area Immigration Services?",
+    question: "Is the consultation really free?",
     answer:
-      "You can get started by contacting us through our website's contact form, emailing us at info@bayareaimmigrationservices.com, or calling us at (510) 770-8700.",
+      "Yes. Your first consultation is free. We review your situation, explain the categories that may fit, and outline the next steps and documents needed.",
   },
   {
-    question: "What types of visas do you handle?",
+    question: "Which visa and green card cases do you handle?",
     answer:
-      "We handle a wide range of visa categories, including but not limited to H-1B, L-1, E-2, J-1, K-1, and O-1. We also assist with business and other nonimmigrant visa categories.",
+      "We most often prepare H-1B, O-1, L-1A, PERM and I-140, EB-1A, EB-2 NIW, H-2A and H-2B petitions. We also prepare RFE responses, arrange expert opinion letters, and handle OCI and Indian passport renunciation.",
+  },
+  {
+    question: "Are you a law firm?",
+    answer:
+      "No. Bay Area Immigration Services is a California-registered and bonded immigration consultant (Bond No. 5317191) providing immigration document preparation. We do not provide legal advice or legal representation.",
   },
   {
     question: "How long does the immigration process take?",
     answer:
-      "The duration varies depending on the type of application, your individual circumstances, and current processing times at the relevant government agencies. During your consultation, we'll provide an estimated timeline based on your specific case.",
+      "It depends on the visa category, whether premium processing is available, and current USCIS processing times. We'll give you an estimated timeline during your free consultation.",
   },
   {
-    question: "What are your consultation fees?",
+    question: "Can you help if I received an RFE?",
     answer:
-      "We offer a detailed consultation for $100, which includes an assessment of your situation and an overview of your case. This fee is applied toward your overall service cost if you choose to proceed with us.",
+      "Yes. We review the Request for Evidence, identify exactly what USCIS is asking for, and prepare an organized, evidence-backed response package.",
+  },
+  {
+    question: "Do you speak Hindi?",
+    answer: "Yes. Our team works with clients in both English and Hindi.",
   },
 ];

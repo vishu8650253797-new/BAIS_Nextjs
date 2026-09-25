@@ -1,9 +1,9 @@
 import { MapPin } from "lucide-react";
 
 const cities = [
-  "San Francisco", "San Jose", "Oakland", "Fremont", "Palo Alto",
-  "Berkeley", "Mountain View", "Sunnyvale", "Santa Clara", "Redwood City",
-  "San Mateo", "Walnut Creek", "Santa Rosa", "Cupertino", "Milpitas",
+  "Fremont", "Newark", "Union City", "Milpitas", "San Jose",
+  "Santa Clara", "Sunnyvale", "Cupertino", "Mountain View", "Palo Alto",
+  "Hayward", "Pleasanton", "Dublin", "San Ramon", "Oakland", "San Francisco",
 ];
 
 export function MarqueeStrip() {

@@ -1,30 +1,30 @@
 import Link from "next/link";
-import { Award, Briefcase, Building2, ChevronRight, Users } from "lucide-react";
+import { Award, Briefcase, Building2, ChevronRight, FileText } from "lucide-react";
 
 const paths = [
   {
     icon: Briefcase,
     title: "Work & Career",
-    subtitle: "H-1B, L-1, O-1 and more",
+    subtitle: "H-1B, O-1, L-1A and more",
     href: "/services#employment-immigration",
   },
   {
-    icon: Building2,
-    title: "Business & Investment",
-    subtitle: "E-1, E-2 and more",
-    href: "/services#business-investor",
-  },
-  {
-    icon: Users,
-    title: "Family Sponsorship",
-    subtitle: "Family-Based, K-1, I-130",
-    href: "/services#family-immigration",
-  },
-  {
     icon: Award,
-    title: "Permanent Residency",
-    subtitle: "EB-1, EB-2, EB-5 and more",
+    title: "Green Cards",
+    subtitle: "EB-1A, EB-2 NIW, PERM & I-140",
     href: "/services#permanent-immigration",
+  },
+  {
+    icon: Building2,
+    title: "Employers & Seasonal Workers",
+    subtitle: "H-2A, H-2B, H-1B sponsorship",
+    href: "/services#employment-immigration",
+  },
+  {
+    icon: FileText,
+    title: "Case Support",
+    subtitle: "RFE responses, expert opinion letters, OCI",
+    href: "/services#other-services",
   },
 ];
 
@@ -34,7 +34,7 @@ export function VisaPathCard() {
       <p className="text-xs font-bold uppercase tracking-wide text-accent">Find Your Path</p>
       <h3 className="mt-2 text-xl font-bold text-ink">What Brings You to the U.S.?</h3>
       <p className="mt-1.5 text-sm leading-relaxed text-body">
-        Select a category to explore the visa options that fit your situation.
+        Choose a category to see the options that fit your situation.
       </p>
 
       <ul className="mt-5 space-y-2">
