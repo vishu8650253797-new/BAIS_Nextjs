@@ -2,6 +2,7 @@ export type Service = {
   slug: string;
   name: string;
   blurb: string;
+  href?: string;
 };
 
 export type ServiceCategory = {
@@ -20,13 +21,20 @@ export const serviceCategories: ServiceCategory[] = [
     services: [
       {
         slug: "h-1b",
-        name: "H-1B Specialty Occupation",
-        blurb: "Petition support for specialty-occupation work visas.",
+        name: "H1B-Visa-Page",
+        blurb: "Cap registration, transfers, extensions, amendments and RFE responses.",
+        href: "/services/h-1b-visa",
       },
       {
         slug: "l-1",
         name: "L-1 Intracompany Transferee",
         blurb: "L-1A manager/executive and L-1B specialized-knowledge transfers.",
+      },
+      {
+        slug: "l-1a-visa",
+        name: "L1A-Visa-Page",
+        blurb: "New U.S. office setup, L-1A petitions, L-2 family & the EB-1C green card path.",
+        href: "/services/l-1a-visa",
       },
       {
         slug: "o-1",
@@ -88,6 +96,12 @@ export const serviceCategories: ServiceCategory[] = [
         slug: "eb-1",
         name: "EB-1 Priority Workers",
         blurb: "Extraordinary ability, outstanding researchers, and multinational executives.",
+      },
+      {
+        slug: "eb-1c",
+        name: "EB1C-Green-Card",
+        blurb: "Green cards for multinational managers and executives — no PERM required.",
+        href: "/services/eb-1c",
       },
       {
         slug: "eb-2-niw",

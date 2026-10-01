@@ -30,7 +30,7 @@ function CategoryLinks({
         {category.services.map((service) => (
           <li key={service.slug}>
             <Link
-              href={`/services#${category.slug}`}
+              href={service.href ?? `/services#${category.slug}`}
               onClick={onNavigate}
               className="text-sm text-body transition-colors duration-150 hover:text-ink"
             >
