@@ -43,8 +43,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "j-1",
-        name: "J-1 Exchange Visitor",
-        blurb: "Support for students, trainees, scholars, and researchers.",
+        name: "J1-Exchange-Visitor-Page",
+        blurb: "DS-7002 training plans, J-2 family visas, 212(e) waivers and extensions for students, trainees & scholars.",
+        href: "/services/j-1-visa",
       },
       {
         slug: "tn",
@@ -71,8 +72,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "k-1",
-        name: "K-1 Fiancé Visa",
-        blurb: "Documentation for fiancé(e) visas and follow-on adjustment of status.",
+        name: "K1-K3-visa",
+        blurb: "I-129F petitions, K-3 spouse visas, interview prep and green card filing after marriage.",
+        href: "/services/k1-k3-visa",
       },
       {
         slug: "i-130",
