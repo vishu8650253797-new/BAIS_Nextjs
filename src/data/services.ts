@@ -120,8 +120,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "eb-3",
-        name: "EB-3 Skilled & Professional Workers",
-        blurb: "Skilled worker, professional, and other-worker green card categories.",
+        name: "EB3-PERM-Green-Card",
+        blurb: "Employer-sponsored PERM labor certification, ETA-9089, I-140 and the green card stage, audit-ready.",
+        href: "/services/eb-3-visa",
       },
       {
         slug: "eb-5",
@@ -135,8 +136,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "us-citizenship",
-        name: "U.S. Citizenship",
-        blurb: "Naturalization (Form N-400) preparation support.",
+        name: "US-Citizenship",
+        blurb: "N-400 prep, travel-days audit, mock civics interviews and Oath-to-Passport & OCI support.",
+        href: "/services/us-citizenship",
       },
     ],
   },
