@@ -38,8 +38,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "o-1",
-        name: "O-1 Extraordinary Ability",
-        blurb: "For individuals with extraordinary ability or achievement.",
+        name: "O1-Visa",
+        blurb: "O-1A & O-1B petitions, advisory opinions, 350+ professor expert letters and the O-3/O-2 family path.",
+        href: "/services/o-1-visa",
       },
       {
         slug: "j-1",
@@ -100,6 +101,12 @@ export const serviceCategories: ServiceCategory[] = [
         blurb: "Extraordinary ability, outstanding researchers, and multinational executives.",
       },
       {
+        slug: "eb-1a",
+        name: "EB1A-Green-Card",
+        blurb: "Self-petition extraordinary-ability green card with independent expert opinion letters from 350+ professors.",
+        href: "/services/eb-1a",
+      },
+      {
         slug: "eb-1c",
         name: "EB1C-Green-Card",
         blurb: "Green cards for multinational managers and executives — no PERM required.",
@@ -107,8 +114,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "eb-2-niw",
-        name: "EB-2 / EB-2 NIW",
-        blurb: "Advanced-degree and exceptional-ability petitions, including National Interest Waiver.",
+        name: "EB2-NIW",
+        blurb: "Self-petition green card via the Dhanasar National Interest Waiver — no employer or PERM needed.",
+        href: "/services/eb-2-niw",
       },
       {
         slug: "eb-3",
@@ -193,8 +201,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "change-of-status",
-        name: "Change of Status",
-        blurb: "Support transitioning between visa categories, e.g. F-1 to H-1B.",
+        name: "Change-of-Status",
+        blurb: "I-539 & employer I-129 filings with a written No-Gap Status Plan for every critical date.",
+        href: "/services/change-of-status",
       },
       {
         slug: "oci-renunciation",
