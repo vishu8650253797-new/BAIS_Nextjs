@@ -193,8 +193,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "rfe-assistance",
-        name: "RFE Assistance",
-        blurb: "Response support for Requests for Evidence across visa categories.",
+        name: "RFE-Assistance",
+        blurb: "Deadline triage, independent expert letters, academic evaluations and I-290B motion/appeal prep.",
+        href: "/services/rfe-assistance",
       },
       {
         slug: "global-mobility",
