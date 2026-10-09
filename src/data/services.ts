@@ -80,8 +80,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "i-130",
-        name: "I-130 Petition for Alien Relative",
-        blurb: "Petition preparation to establish a qualifying family relationship.",
+        name: "I130-Petition",
+        blurb: "Who-can-file eligibility, relationship-specific evidence, the full filing process and the Family Case Map.",
+        href: "/services/i-130-petition",
       },
     ],
   },
@@ -220,8 +221,9 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "oci-renunciation",
-        name: "OCI & Renunciation",
-        blurb: "Overseas Citizen of India card and Indian citizenship renunciation support.",
+        name: "OCI-Renunciation",
+        blurb: "Indian passport surrender, the OCI Document Binder, minors, 2026 e-OCI rules and fees.",
+        href: "/services/oci-renunciation",
       },
     ],
   },
