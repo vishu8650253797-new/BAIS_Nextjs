@@ -68,8 +68,9 @@ export const serviceCategories: ServiceCategory[] = [
     services: [
       {
         slug: "family-based-immigration",
-        name: "Family-Based Immigration",
-        blurb: "Immediate relative and family preference category support.",
+        name: "Family-Based-Immigration",
+        blurb: "I-130 petitions, the Family Case Map, visa bulletin wait times, I-864 support and consular or adjustment filing.",
+        href: "/services/family-based-immigration",
       },
       {
         slug: "k-1",
@@ -105,6 +106,12 @@ export const serviceCategories: ServiceCategory[] = [
         name: "EB1A-Green-Card",
         blurb: "Self-petition extraordinary-ability green card with independent expert opinion letters from 350+ professors.",
         href: "/services/eb-1a",
+      },
+      {
+        slug: "eb-1b",
+        name: "EB1B-Green-Card",
+        blurb: "Employer-filed green card for outstanding professors and researchers — no PERM required.",
+        href: "/services/eb-1b",
       },
       {
         slug: "eb-1c",
@@ -155,18 +162,21 @@ export const serviceCategories: ServiceCategory[] = [
       },
       {
         slug: "e-1",
-        name: "E-1 Treaty Trader",
-        blurb: "For nationals of treaty countries conducting substantial trade with the U.S.",
+        name: "E1-Treaty-Trader",
+        blurb: "Country check, the substantial & principal trade tests and the full E-1 filing process.",
+        href: "/services/e-1-treaty-trader",
       },
       {
         slug: "e-2",
-        name: "E-2 Treaty Investor",
-        blurb: "For nationals of treaty countries investing in a U.S. business.",
+        name: "E2-Treaty-Investor",
+        blurb: "Country check, investment proportionality, business plan review and the full E-2 filing process.",
+        href: "/services/e-2-treaty-investor",
       },
       {
         slug: "b-1",
-        name: "B-1 Business Visitor",
-        blurb: "Short-term business visitor documentation.",
+        name: "B1-B2-Visitor-Visa",
+        blurb: "Pick the right visa or ESTA, DS-160 prep, interview coaching, 2026 bond rules and extensions.",
+        href: "/services/b-1-b-2-visa",
       },
       {
         slug: "accounting-solutions",

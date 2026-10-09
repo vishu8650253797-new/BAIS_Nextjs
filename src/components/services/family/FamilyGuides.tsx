@@ -1,0 +1,41 @@
+import Link from "next/link";
+import { Container } from "@/components/ui/Container";
+import { FadeIn } from "@/components/shared/FadeIn";
+
+const guides = [
+  { title: "Family Visa Bulletin: Monthly Update", tag: "Read guide", href: "/blog" },
+  { title: "Immigrant Visa Interviews Paused Worldwide", tag: "Read guide", href: "/blog" },
+  { title: "I-864 in 2026: Income & Joint Sponsors", tag: "Read guide", href: "/blog" },
+  { title: "K-1 Fiancé(e) Visa", tag: "Service", href: "/services/k1-k3-visa" },
+  { title: "Spouse Visa (CR-1 / IR-1)", tag: "Service", href: "/services#family-immigration" },
+  { title: "U.S. Citizenship (N-400)", tag: "Service", href: "/services/us-citizenship" },
+];
+
+export function FamilyGuides() {
+  return (
+    <section className="bg-white py-20">
+      <Container>
+        <p className="mb-3 text-xs font-bold uppercase tracking-wide text-accent">
+          Keep learning
+        </p>
+        <h2 className="text-2xl font-bold text-ink sm:text-3xl">Helpful Family Immigration Guides</h2>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {guides.map((guide, index) => (
+            <FadeIn key={guide.title} delay={index * 40}>
+              <Link
+                href={guide.href}
+                className="block h-full rounded-2xl border border-border bg-cream p-5 font-medium text-ink transition-all duration-300 hover:-translate-y-1 hover:border-maroon/30 hover:shadow-xl hover:shadow-ink/5"
+              >
+                {guide.title}
+                <span className="mt-2 block text-sm font-semibold text-maroon">
+                  {guide.tag} →
+                </span>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
